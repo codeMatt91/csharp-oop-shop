@@ -46,6 +46,7 @@ namespace csharp_es03_mattina // Note: actual namespace depends on the project n
                 Console.WriteLine("Nome: {0}", prod1.Nome);
                 Console.WriteLine("Descrizione: {0}", prod1.Descrizione);
                 Console.WriteLine(prod1.prezzoIvato());
+                Console.WriteLine(prod1.codicePiuNome());
 
             }
             catch (Exception ex) { 

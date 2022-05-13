@@ -90,5 +90,11 @@ namespace csharp_oop_shop
             double pIva = (this.Prezzo * this.Iva)/100;
             return newPrezzo = this.Prezzo + pIva;
         }
+
+        public string codicePiuNome()
+        {
+            string slug = this.Nome + this.Codice;
+            return slug;
+        }
     }
 }
