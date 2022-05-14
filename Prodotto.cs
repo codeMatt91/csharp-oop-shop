@@ -75,7 +75,7 @@ namespace csharp_oop_shop
         public Prodotto(string nome, string descrizione, double prezzo, double iva)
         {
             //random = new Random();
-            codice = random.Next();
+            codice = random.Next(0, 100000);
             this.Nome = nome;
             this.Descrizione = descrizione;
             this.Prezzo = prezzo;
@@ -96,5 +96,33 @@ namespace csharp_oop_shop
             string slug = this.Nome + this.Codice;
             return slug;
         }
+
+       
+
+        
+        public string codeLenght(int num)
+        {
+            string conv = num.ToString();
+            int lenght = conv.Length;
+
+            if (lenght < 8)
+            {
+                string tot = "";
+                for (int i = 0; i < 8 - lenght; i++)
+                {
+                    string subS = "0";
+                    tot += subS;
+                }
+
+                string totSubstring = tot + conv;
+                return totSubstring;
+            }
+            else {
+                return num.ToString();
+            }
+
+            
+;        }
+        
     }
 }
